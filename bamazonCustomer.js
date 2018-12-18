@@ -1,4 +1,5 @@
 var mysql = require("mysql");
+var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -15,7 +16,7 @@ connection.connect(function(err) {
 });
 
 function afterConnection() {
-  connection.query("SELECT * FROM products", function(err, res) {
+  connection.query("SELEnCT * FROM products", function(err, res) {
     if (err) throw err;
     console.log(res);
     
